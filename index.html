@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PuraLoka - 2D ke 3D</title>
+  </head>
+  <body>
+
+    <div id="app-container">
+      
+      <form id="uploadForm">
+        <h1>Image to 3D</h1>
+        <div>
+          <label for="image">Pilih gambar:</label>
+          <input type="file" name="image" id="image" accept="image/*" required />
+        </div>
+        <button type="submit" id="submitButton">
+          Upload dan Proses
+        </button>
+      </form>
+
+      <div id="statusArea" class="hidden">
+        <div class="spinner"></div>
+        <p id="statusMessage">Mengupload gambar...</p>
+      </div>
+
+      <div id="resultArea" class="hidden">
+        <h2>Proses Selesai!</h2>
+        <p>Model 3D Anda telah berhasil dibuat.</p>
+        <a href="#" id="modelLink" target="_blank">
+          Lihat/Unduh Model 3D
+        </a>
+        <button id="resetButton" class="link-button">
+          Buat 3D Model Lain
+        </button>
+      </div>
+
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
